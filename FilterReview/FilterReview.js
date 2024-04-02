@@ -267,7 +267,7 @@ class ESCTarget extends NotchTarget {
             }
             return ret
         }
-        
+
         return [this.get_target(config, this.data.interpolated[instance].avg_freq[index])]
     }
 
@@ -398,7 +398,7 @@ class FFTTarget extends NotchTarget {
             }
             return ret
         }
-        
+
         return [this.get_target(config, this.data.interpolated[instance].value[index])]
     }
 
@@ -952,9 +952,9 @@ function setup_plots() {
     flight_data.layout = {
         xaxis: { title: {text: time_scale_label },
                  domain: [0.07, 0.93],
-                 type: "linear", 
-                 zeroline: false, 
-                 showline: true, 
+                 type: "linear",
+                 zeroline: false,
+                 showline: true,
                  mirror: true,
                  rangeslider: {} },
         showlegend: false,
@@ -1083,7 +1083,7 @@ function setup_plots() {
     Bode.data = []
 
     Bode.data[0] = { line: {color: "transparent"},
-                     fill: "toself", 
+                     fill: "toself",
                      type: "scatter",
                      showlegend: false,
                      hoverinfo: 'none' }
@@ -1973,6 +1973,22 @@ function redraw_Spectrogram() {
         axis = "z"
     }
 
+    // Set fixed color scale if user wants manual control
+    var fixedScaleSpec = document.getElementById("FixedScaleSpec");
+    if (fixedScaleSpec.checked) {
+        var fixedScaleSpecMin = document.getElementById("FixedScaleSpecMin").value
+        var fixedScaleSpecMax = document.getElementById("FixedScaleSpecMax").value
+        if (fixedScaleSpecMin != "") {
+            Spectrogram.data[0].zmin = parseFloat(fixedScaleSpecMin)
+        }
+        if (fixedScaleSpecMax != "") {
+            Spectrogram.data[0].zmax = parseFloat(fixedScaleSpecMax)
+        }
+    } else {
+        Spectrogram.data[0].zmin = NaN
+        Spectrogram.data[0].zmax = NaN
+    }
+
     // Setup axes
     Spectrogram.layout.yaxis.type = frequency_scale.type
     Spectrogram.layout.yaxis.title.text = frequency_scale.label
@@ -1984,7 +2000,7 @@ function redraw_Spectrogram() {
     Spectrogram.data[0].colorbar.title.text = amplitude_scale.label
 
     // Get alias helper to fold down frequencies, if enabled
-    let alias = get_alias_obj(Gyro_batch[batch_instance].FFT) 
+    let alias = get_alias_obj(Gyro_batch[batch_instance].FFT)
 
     // Setup xy data (x and y swapped because transpose flag is set)
     Spectrogram.data[0].y = frequency_scale.fun(alias.bins)
@@ -2024,7 +2040,6 @@ function redraw_Spectrogram() {
     // Windowing amplitude correction depends on spectrum of interest
     const FFT_resolution = Gyro_batch[batch_instance].FFT.average_sample_rate/Gyro_batch[batch_instance].FFT.window_size
     const window_correction = amplitude_scale.window_correction(Gyro_batch[batch_instance].FFT.correction, FFT_resolution)
-
     // Setup z data
     const len = Spectrogram.data[0].x.length
     const num_bins = Spectrogram.data[0].y.length
@@ -2213,16 +2228,16 @@ function update_hidden(source) {
 
         const post_filter = id.includes("Post")
         const post_estimate = id.includes("PostEst")
-    
+
         var pre_post_index = 0
         if (post_estimate) {
             pre_post_index = 2
         } else if (post_filter) {
             pre_post_index = 1
         }
-    
+
         const axi = id.substr(id.length - 1)
-    
+
         let axi_index
         for (let j=0;j<3;j++) {
             if (axis[j] == axi) {

@@ -62,7 +62,7 @@ These params can then be saved and loaded into the autopilot without the need fo
             <td>
                 <fieldset style="width:100px;height:80px">
                     <legend>Log type
-                        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+                        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
                         data-tippy-content='Log type is automatically set based on loaded log. If both Batch and Raw sensor are present then this selection is used. The selection must be made before the log is loaded. The Calculate button will not change log type.',
                         data-tippy-maxWidth='750px'/>
                     </legend>
@@ -75,7 +75,7 @@ These params can then be saved and loaded into the autopilot without the need fo
             <td>
                 <fieldset style="width:200px;height:80px">
                     <legend>FFT Settings
-                        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+                        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
                         data-tippy-allowHTML="true"
                         data-tippy-content='If Batch logging is used the number of FFT windows per batch can be increased. Raw sensor logging allows the FFT window size to be changed directly. Window size must be a power of 2 (512, 1024, 2048, ...) the up/down buttons do this automatically.
                                             <ul>
@@ -101,7 +101,7 @@ These params can then be saved and loaded into the autopilot without the need fo
             <td>
                 <fieldset style="width:200px;height:80px">
                     <legend>Analysis time
-                        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+                        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
                         data-tippy-content='Start and end times for averaging of FFT results show in the IMU Spectrum plot, automatically updated from the selected portion of the log shown in the Flight Data plot. The Calculate button must be clicked after any change of start/end time.'
                         data-tippy-maxWidth='750px'/>
                     </legend>
@@ -118,7 +118,7 @@ These params can then be saved and loaded into the autopilot without the need fo
                 <input type="button" id="calculate" value="Calculate" onclick="loading_call(re_calc)">
             </td>
             <td width="99%" style="text-align:right; vertical-align:top">
-                <img id="TT" src="../images/question-circle.svg" width="30px" 
+                <img id="TT" src="../images/question-circle.svg" width="30px"
                     data-tippy-content='Load a .bin log file using the file button. "Open In" opens the log in one of the other WebTools. If Analysis time or FFT Settings are changed the Calculate button should be used to re-calculate the IMU Spectrum.',
                     data-tippy-maxWidth='750px'
                 />
@@ -132,7 +132,7 @@ These params can then be saved and loaded into the autopilot without the need fo
 
 <table><tr><td style="width:1200px">
     <h2 style="text-align:center">Flight Data
-        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
         data-tippy-content='Zoom into a section of the flight to change the Analysis time then click "Calculate". Selecting a hover section when the noise should be constant will give the clearest results on the IMU Spectrum.',
         data-tippy-maxWidth='750px'/>
     </h2>
@@ -143,7 +143,7 @@ These params can then be saved and loaded into the autopilot without the need fo
 
 <table><tr><td style="width:1200px">
     <h2 style="text-align:center">IMU Spectrum
-        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
         data-tippy-content='Spectrums are shown for each Gyro. Each axis can be shown or hidden, before the filters, after any enabled filtering, and/or an estimate after any proposed filtering made by changing the log&#39s values in the "Filter Configuration" panel. Double click Gyro headings to show/hide all.',
         data-tippy-maxWidth='750px'/>
     </h2>
@@ -284,10 +284,10 @@ These params can then be saved and loaded into the autopilot without the need fo
                         </legend>
                         <input type="checkbox" id="Gyro2PostX" name="Gyro2PostX" onchange="update_hidden(this)">
                         <label for="Gyro2PostX">X</label>
-    
+
                         <input type="checkbox" id="Gyro2PostY" name="Gyro2PostY" onchange="update_hidden(this)">
                         <label for="Gyro2PostY">Y</label>
-    
+
                         <input type="checkbox" id="Gyro2PostZ" name="Gyro2PostZ" onchange="update_hidden(this)">
                         <label for="Gyro2PostZ">Z</label>
                     </fieldset>
@@ -299,10 +299,10 @@ These params can then be saved and loaded into the autopilot without the need fo
                         </legend>
                         <input type="checkbox" id="Gyro2PostEstX" name="Gyro2PostEstX" onchange="update_hidden(this)">
                         <label for="Gyro2PostEstX">X</label>
-    
+
                         <input type="checkbox" id="Gyro2PostEstY" name="Gyro2PostEstY" onchange="update_hidden(this)">
                         <label for="Gyro2PostEstY">Y</label>
-    
+
                         <input type="checkbox" id="Gyro2PostEstZ" name="Gyro2PostEstZ" onchange="update_hidden(this)">
                         <label for="Gyro2PostEstZ">Z</label>
                     </fieldset>
@@ -321,7 +321,7 @@ These params can then be saved and loaded into the autopilot without the need fo
         <td>
             <fieldset style="width:300px;height:40px">
                 <legend>Amplitude scale
-                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
                     data-tippy-content='Different amplitude scales show effects more clearly than others. Note that this scale also apples to the IMU Spectrogram.',
                     data-tippy-maxWidth='750px'/>
                 </legend>
@@ -336,7 +336,7 @@ These params can then be saved and loaded into the autopilot without the need fo
         <td>
             <fieldset style="width:260px;height:40px">
                 <legend>Frequency scale
-                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
                     data-tippy-content='RPM Frequency scale is usefully to understand what could be the cause of noise. Note that this scale also apples to the IMU Spectrogram.',
                     data-tippy-maxWidth='750px'/>
                 </legend>
@@ -354,7 +354,7 @@ These params can then be saved and loaded into the autopilot without the need fo
         <td>
             <fieldset style="width:240px;height:40px">
                 <legend>Notch tracking
-                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
                     data-tippy-content='Show/hide the center frequency and movement range of enabled notch filters. These should line up with noise peaks.',
                     data-tippy-maxWidth='750px'/>
                 </legend>
@@ -368,7 +368,7 @@ These params can then be saved and loaded into the autopilot without the need fo
         <td>
             <fieldset style="width:240px;height:40px">
                 <legend>Loop Rate Aliasing
-                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
                     data-tippy-allowHTML="true"
                     data-tippy-content='Aliasing between IMU rate and PID rate can cause high frequency noise to reflect down to into the control bandwidth.
                                         <ul>
@@ -391,7 +391,7 @@ These params can then be saved and loaded into the autopilot without the need fo
 
 <table><tr><td style="width:1200px">
     <h2 style="text-align:center">Filter Configuration
-        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
         data-tippy-content='Parameter values initially from log, changes can be made and applied to the estimated post filter spectrum. Hover over param names to see descriptions. Click Recalculate filters after making any changes.',
         data-tippy-maxWidth='750px'/>
     </h2>
@@ -419,7 +419,7 @@ These params can then be saved and loaded into the autopilot without the need fo
 <td>
     <fieldset style="width:428px;height:70px">
     <legend>Setup
-        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
         data-tippy-content='Recalculate filters after changing any parameters to update the estimated post filter spectrum. Save or load parameters to/from a param file.',
         data-tippy-maxWidth='750px'/>
     </legend>
@@ -505,7 +505,7 @@ These params can then be saved and loaded into the autopilot without the need fo
 
 <table><tr><td style="width:1200px">
     <h2 style="text-align:center">IMU Spectrogram
-        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+        <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
         data-tippy-content='IMU spectrum vs time, this shows how the noise changes throughout the flight. More dynamic flights can be used to check the notch is tracking the noise correctly. Any gaps indicate log dropouts.',
         data-tippy-maxWidth='750px'/>
     </h2>
@@ -515,7 +515,19 @@ These params can then be saved and loaded into the autopilot without the need fo
 
 <table>
     <tr>
-        <td style="width: 100px;"></td>
+        <td>
+            <fieldset style="width:150px;height:40px">
+                <legend>Fixed scale<input type="checkbox" id="FixedScaleSpec" name="FixedScaleSpec" onchange="redraw_Spectrogram()">
+                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
+                    data-tippy-allowHTML="true"
+                    data-tippy-content='Check to control color scale manually (min) - (max)'
+                    data-tippy-maxWidth='750px'/>
+                </legend>
+                <input type="number" id="FixedScaleSpecMin" name="FixedScaleSpecMin" style="width:55px" type="number" step="5" value="-160" onchange="redraw_Spectrogram()">
+                <span> - </span>
+                <input type="number" id="FixedScaleSpecMax" name="FixedScaleSpecMax" style="width:55px" type="number" step="5" value="0" onchange="redraw_Spectrogram()">
+            </fieldset>
+        </td>
         <td>
             <fieldset style="width:125px;height:40px">
                 <legend>Gyro instance</legend>
@@ -532,7 +544,7 @@ These params can then be saved and loaded into the autopilot without the need fo
         <td>
             <fieldset style="width:350px;height:40px">
                 <legend>Filtering
-                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
                     data-tippy-allowHTML="true"
                     data-tippy-content='<ul>
                                         <li>Pre-filter: Logged IMU spectrum prior to application of filters.</li>
@@ -567,7 +579,7 @@ These params can then be saved and loaded into the autopilot without the need fo
         <td>
             <fieldset style="width:240px;height:40px">
                 <legend>Notch tracking
-                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
                     data-tippy-content='Show/hide the center frequency and movement range of enabled notch filters. These should line up with noise peaks.
                                         Logged shows the logged notch frequencies from the log, these will not change with parameter changes.',
                     data-tippy-maxWidth='750px'/>
@@ -588,7 +600,7 @@ These params can then be saved and loaded into the autopilot without the need fo
 
 <table><tr><td style="width:1200px">
 <h2 style="text-align:center">Frequency Response of Filters
-    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
     data-tippy-content='Bode plot of configured filters. Solid line shows average, shadow shows the range of moment as the notches track up and down.',
     data-tippy-maxWidth='750px'/>
 </h2>
@@ -615,7 +627,7 @@ These params can then be saved and loaded into the autopilot without the need fo
         <td>
             <fieldset style="width:175px;">
                 <legend>Phase scale
-                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom" 
+                    <img id="TT" src="../images/question-circle.svg" style="width: 1em; vertical-align: bottom"
                     data-tippy-content='±180 is the traditional bode phase scale. Un-wrapped attempts to remove the jumps, however for very large changes in phase the un-wrapping can go wrong, if you see very large phase this is probably what has happened. The ±180 scale is still correct.',
                     data-tippy-maxWidth='750px'/>
                 </legend>
@@ -639,7 +651,7 @@ These params can then be saved and loaded into the autopilot without the need fo
 <script>
 
     window.onerror = function(msg, url, linenumber) {
-        alert('Sorry, something went wrong.\n\n' + 
+        alert('Sorry, something went wrong.\n\n' +
               'Please try a hard reload of this page to clear its cache.\n\n' +
               'If the error persists open an issue on the GitHub repo.\n' +
               'Include a copy of the log and the following error message:\n\n' +
